@@ -75,136 +75,140 @@
         }
 
         /* Header */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    backdrop-filter: blur(12px);
-    background: rgba(11, 15, 20, .5);
-    border-bottom: 1px solid rgba(255, 255, 255, .06);
-}
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(12px);
+            background: rgba(11, 15, 20, .5);
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+        }
 
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 0;
-}
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+        }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 800;
-    letter-spacing: .5px;
-}
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            letter-spacing: .5px;
+        }
 
-.logo {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--brand), var(--accent));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    color: #051016;
-    box-shadow: 0 10px 30px rgba(34, 211, 238, .35);
-}
+        .logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--brand), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: #051016;
+            box-shadow: 0 10px 30px rgba(34, 211, 238, .35);
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
 
-nav a {
-    padding: 10px 12px;
-    border-radius: 10px;
-    color: var(--muted);
-    font-weight: 600;
-}
+        nav a {
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: var(--muted);
+            font-weight: 600;
+        }
 
-nav a:hover {
-    color: var(--text);
-    background: rgba(255, 255, 255, .05);
-}
+        nav a:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, .05);
+        }
 
-.cta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+        .cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    border-radius: 14px;
-    font-weight: 700;
-    border: 1px solid rgba(255, 255, 255, .1);
-    background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
-    color: var(--text);
-}
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, .1);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
+            color: var(--text);
+        }
 
-.btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 25px rgba(34, 211, 238, .15), inset 0 1px 0 rgba(255, 255, 255, .1);
-}
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(34, 211, 238, .15), inset 0 1px 0 rgba(255, 255, 255, .1);
+        }
 
-.btn.primary {
-    background: linear-gradient(135deg, var(--brand), #38bdf8 60%, #2563eb);
-    border-color: transparent;
-    color: #04121a;
-    box-shadow: 0 10px 30px var(--ring);
-}
+        .btn.primary {
+            background: linear-gradient(135deg, var(--brand), #38bdf8 60%, #2563eb);
+            border-color: transparent;
+            color: #04121a;
+            box-shadow: 0 10px 30px var(--ring);
+        }
 
-.btn.ghost {
-    background: transparent;
-}
+        .btn.ghost {
+            background: transparent;
+        }
 
-.menu {
-    display: none; /* hidden on desktop */
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: var(--text);
-    cursor: pointer;
-}
+        .menu {
+            display: none;
+            /* hidden on desktop */
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+        }
 
-/* ----------------------------- */
-/* NEW: Mobile Navigation Styles */
-/* ----------------------------- */
-@media (max-width: 768px) {
-    nav {
-        display: none; /* hide by default */
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: rgba(11, 15, 20, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 16px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
-    }
+        /* ----------------------------- */
+        /* NEW: Mobile Navigation Styles */
+        /* ----------------------------- */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                /* hide by default */
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background: rgba(11, 15, 20, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 16px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+            }
 
-    nav.active {
-        display: block; /* show when toggled */
-    }
+            nav.active {
+                display: block;
+                /* show when toggled */
+            }
 
-    nav ul {
-        flex-direction: column;
-        gap: 14px;
-    }
+            nav ul {
+                flex-direction: column;
+                gap: 14px;
+            }
 
-    .menu {
-        display: block; /* show hamburger */
-    }
-}
+            .menu {
+                display: block;
+                /* show hamburger */
+            }
+        }
 
         /* Hero */
         .hero {
@@ -567,7 +571,7 @@ nav a:hover {
             background: rgba(255, 255, 255, .04);
             color: var(--text);
             outline: none;
-            
+
         }
 
         input:focus,
@@ -629,16 +633,17 @@ nav a:hover {
             .menu {
                 display: block;
             }
-             details {
-            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
-            border: 1px solid rgba(255, 255, 255, .08);
-            border-radius: 14px;
-            padding: 14px 16px;
-        }
 
-        details[open] {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
-        }
+            details {
+                background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+                border: 1px solid rgba(255, 255, 255, .08);
+                border-radius: 14px;
+                padding: 14px 16px;
+            }
+
+            details[open] {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+            }
         }
 
         @media (max-width: 640px) {
@@ -657,29 +662,32 @@ nav a:hover {
             .grid-2 {
                 grid-template-columns: 1fr;
             }
-            input,
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px 14px;
-            border-radius: 12px;
-            border: 5px solid rgba(255, 255, 255,.5);
-            background: rgba(255, 255, 255, .04);
-            color: var(--text);
-            outline: none;
-            
-        }
 
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: var(--brand);
-            /* box-shadow: 0 0 0 4px var(--ring); */
-            border: 1px solid ;
-        }
-        ::placeholder {
-  opacity: .25; /* Firefox */
-}
+            input,
+            textarea,
+            select {
+                width: 100%;
+                padding: 12px 14px;
+                border-radius: 12px;
+                border: 5px solid rgba(255, 255, 255, .5);
+                background: rgba(255, 255, 255, .04);
+                color: var(--text);
+                outline: none;
+
+            }
+
+            input:focus,
+            textarea:focus,
+            select:focus {
+                border-color: var(--brand);
+                /* box-shadow: 0 0 0 4px var(--ring); */
+                border: 1px solid;
+            }
+
+            ::placeholder {
+                opacity: .25;
+                /* Firefox */
+            }
 
         }
     </style>
@@ -739,7 +747,8 @@ nav a:hover {
                 <h1>Automate. Accelerate. <span
                         style="background:linear-gradient(135deg, var(--brand), #38bdf8); -webkit-background-clip:text; background-clip:text; color:transparent;">Dominate</span>.
                 </h1>
-                <p class="lead">AutoMan Solutions builds end-to-end automations that eliminate repetitive work, supercharge
+                <p class="lead">AutoMan Solutions builds end-to-end automations that eliminate repetitive work,
+                    supercharge
                     teams, and unlock growth. From RPA to AI agents - we ship in days, not months.</p>
                 <div class="hero-cta">
                     <a class="btn primary" href="#contact">Get Free Automation Audit</a>
@@ -964,16 +973,6 @@ $ done <span class="caret"></span></code></pre>
                         <label for="company">Company</label>
                         <input id="company" name="company" placeholder="Acme Inc." />
                     </div>
-                    <!-- <div class="field">
-                        <label for="budget">Budget</label>
-                        <select id="budget" name="budget">
-                            <option value="">Select…</option>
-                            <option>Under ₹50k</option>
-                            <option>₹50k–₹1.5L</option>
-                            <option>₹1.5L–₹3L</option>
-                            <option>₹3L+</option>
-                        </select>
-                    </div> -->
                 </div>
                 <div class="field">
                     <label for="message">What should we automate?</label>
@@ -985,6 +984,7 @@ $ done <span class="caret"></span></code></pre>
                     <span class="note" id="formNote">No spam. No pressure. Just ideas.</span>
                 </div>
             </form>
+
         </div>
     </section>
 
@@ -1001,9 +1001,9 @@ $ done <span class="caret"></span></code></pre>
         // Year
         document.getElementById('year').textContent = new Date().getFullYear();
         // Toggle Menu
-      document.getElementById("openMenu").addEventListener("click", function () {
-  document.querySelector("header nav").classList.toggle("active");
-});
+        document.getElementById("openMenu").addEventListener("click", function () {
+            document.querySelector("header nav").classList.toggle("active");
+        });
 
 
         // terminal
@@ -1078,6 +1078,57 @@ $ done <span class="caret"></span></code></pre>
         //     form.reset();
         // });
 
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const formNote = document.getElementById('formNote');
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const company = document.getElementById('company').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                formNote.textContent = 'Please fill in Name, Email, and Message.';
+                formNote.style.color = '#fca5a5'; // red
+                return;
+            }
+
+            // Construct JSON payload for the API
+            const payload = {
+                user_name: name,
+                user_email: email,
+                user_company_name: company,
+                message: message,
+                admin_subject: "New Lead Received!",
+                user_subject: "Thank you for contacting Automan Solutions"
+            };
+
+            try {
+                formNote.textContent = 'Sending...';
+                formNote.style.color = '#86efac'; // greenish
+
+                const response = await fetch('http://127.0.0.1:5000/send_email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    formNote.textContent = 'Thanks! We\'ll reach out within 24 hours.';
+                    formNote.style.color = '#86efac';
+                    this.reset();
+                } else {
+                    const errorData = await response.json();
+                    formNote.textContent = 'Error: ' + (errorData.message || 'Failed to send.');
+                    formNote.style.color = '#fca5a5';
+                }
+            } catch (error) {
+                formNote.textContent = 'Network error. Please try again later.';
+                formNote.style.color = '#fca5a5';
+                console.error('Fetch error:', error);
+            }
+        });
 
 
     </script>

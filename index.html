@@ -33,7 +33,9 @@
 
         body {
             margin: 0;
-            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            font-family: "Century Gothic", "CenturyGothic", AppleGothic, "Segoe UI", "Trebuchet MS", Roboto, Helvetica, Arial, sans-serif;
+            ;
+            /* font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, "Apple Color Emoji", "Segoe UI Emoji"; */
             background: radial-gradient(1200px 600px at 80% -10%, rgba(124, 58, 237, .25), transparent), radial-gradient(1000px 500px at -10% 20%, rgba(34, 211, 238, .15), transparent), var(--bg);
             color: var(--text);
         }
@@ -99,9 +101,10 @@
             letter-spacing: .5px;
         }
 
-        .logo {
-            width: 36px;
-            height: 36px;
+        .logo img {
+            width: 40px;
+            height: 40px;
+            padding: 4px;
             border-radius: 10px;
             background: linear-gradient(135deg, var(--brand), var(--accent));
             display: flex;
@@ -698,7 +701,7 @@
     <header>
         <div class="container nav">
             <a href="#top" class="brand">
-                <div class="logo">AM</div>
+                <div class="logo"><img src="images/trans logo.png" alt=""></div>
                 <span>AutoMan Solutions</span>
             </a>
             <nav aria-label="Primary">
@@ -725,7 +728,8 @@
             style="position:absolute; right:0; top:0; height:100%; width:78%; max-width:360px; background:#0b0f14; border-left:1px solid rgba(255,255,255,.08); padding:18px;">
             <div style="display:flex; align-items:center; justify-content:space-between;">
                 <div class="brand">
-                    <div class="logo">AM</div><span>AutoMan Solutions</span>
+                    <div class="logo"><img src="images/trans logo.png" alt=""></div>
+                    <span>AutoMan Solutions</span>
                 </div>
                 <button id="closeMenu" class="btn">✕</button>
             </div>
@@ -993,10 +997,10 @@ $ done <span class="caret"></span></code></pre>
 
         <div class="container"
             style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
-            <div >
+            <div>
                 <div><strong>Email : </strong>contact@automan.solutions</div>
                 <!-- <strong>Phone : </strong>+918976596577 -->
-                <div><strong>Address : </strong>Nashik,Maharashtra</div> 
+                <div><strong>Address : </strong>Nashik,Maharashtra</div>
 
             </div>
             <p>© <span id="year"></span> AutoMan Solutions - Empowering businesses with automation ⚡</p>

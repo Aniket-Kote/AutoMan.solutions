@@ -1056,7 +1056,30 @@ $ done <span class="caret"></span></code></pre>
         </div>
     </footer>
 <canvas id="bgAnimation"></canvas>
+<!-- n8n Chat Widget -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/style.css" rel="stylesheet" />
+<div id="n8n-chat"></div>
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/chat.bundle.es.js';
 
+  createChat({
+    webhookUrl: 'https://automansolutions.app.n8n.cloud/webhook/7141d142-e18e-496c-b086-390c70afd3da/chat',
+    mode: 'window',
+    target: '#n8n-chat',
+    initialMessages: [
+      'Hi there! 👋',
+      'How can I help you today?'
+    ],
+    i18n: {
+      en: {
+        title: 'Welcome!',
+        subtitle: 'Start a chat — we’re here to help.',
+        inputPlaceholder: 'Type your question…'
+      }
+    },
+    poweredBy: false
+  });
+</script>
 
 </body>
 

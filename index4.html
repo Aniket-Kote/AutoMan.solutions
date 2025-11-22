@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoMan Solutions - Maintenance</title>
+
+    <style>
+        :root {
+            --bg: #0b0f14;
+            --text: #e6eefb;
+            --muted: #87a0be;
+            --brand: #22d3ee;
+            --accent: #7c3aed;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            height: 100vh;
+            background: radial-gradient(1000px 600px at 80% -10%, rgba(124, 58, 237, .25), transparent),
+                        radial-gradient(800px 400px at -10% 20%, rgba(34, 211, 238, .15), transparent),
+                        var(--bg);
+            font-family: "Century Gothic", sans-serif;
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Futuristic grid lines */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            animation: gridPulse 6s linear infinite;
+        }
+
+        @keyframes gridPulse {
+            0% { opacity: 0.2; }
+            50% { opacity: 0.4; }
+            100% { opacity: 0.2; }
+        }
+
+        .wrapper {
+            max-width: 480px;
+            padding: 20px;
+            position: relative;
+            z-index: 20;
+            animation: fadeUp 1s ease;
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--brand), #38bdf8);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 14px;
+        }
+
+        p {
+            font-size: 17px;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            color: #04121a;
+            background: linear-gradient(135deg, var(--brand), #38bdf8 60%, #2563eb);
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(34, 211, 238, .35);
+        }
+
+        /* Background particle canvas */
+        #bgAnimation {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<canvas id="bgAnimation"></canvas>
+
+<div class="wrapper">
+    <h1>We’ll Be Right Back ⚡</h1>
+    <p>Our website is currently undergoing scheduled maintenance.<br>
+       We’re upgrading systems to serve you better.</p>
+
+    <a href="mailto:contact@automan.solutions" class="btn">Contact Us</a>
+
+    <p style="margin-top:18px;">AutoMan Solutions • Automate. Accelerate. Dominate.</p>
+</div>
+
+<script>
+    /* Background particle animation */
+    const canvas = document.getElementById("bgAnimation");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    let width, height;
+
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        particles = Array.from({ length: 80 }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            size: Math.random() * 2 + 0.5,
+            speedX: Math.random() * 0.6 - 0.3,
+            speedY: Math.random() * 0.6 - 0.3,
+            color: Math.random() > 0.5 ? "#22d3ee" : "#7c3aed",
+        }));
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        particles.forEach((p) => {
+            p.x += p.speedX;
+            p.y += p.speedY;
+            if (p.x < 0 || p.x > width) p.speedX *= -1;
+            if (p.y < 0 || p.y > height) p.speedY *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.shadowBlur = 8;
+            ctx.shadowColor = p.color;
+            ctx.fill();
+        });
+
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 120) {
+                    ctx.strokeStyle = `rgba(34, 211, 238, ${1 - dist / 120})`;
+                    ctx.lineWidth = 0.3;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+    animate();
+</script>
+
+</body>
+</html>

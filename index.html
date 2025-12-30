@@ -877,6 +877,85 @@ $ done <span class="caret"></span></code></pre>
             </div> -->
         </div>
     </section>
+<!-- Automation Bots -->
+<section class="reveal" id="bots">
+    <div class="container">
+        <h2 class="section-title">Automation bots we build</h2>
+        <p class="section-lead">
+            We design and deploy smart automation bots that work like digital employees —
+            handling repetitive tasks, following rules, and running 24/7 without breaks.
+        </p>
+
+        <div class="cards">
+            <article class="card">
+                <span class="badge">Sales Bots</span>
+                <h3>Lead & Sales Automation Bots</h3>
+                <p>
+                    Bots that capture leads from websites, ads, or LinkedIn, update your CRM,
+                    send follow-ups, schedule meetings, and notify your sales team automatically.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="badge">Support Bots</span>
+                <h3>Customer Support Bots</h3>
+                <p>
+                    Chatbots and email bots that answer common customer questions,
+                    check order or ticket status, and escalate only complex issues to humans.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="badge">Finance Bots</span>
+                <h3>Invoice & Accounting Bots</h3>
+                <p>
+                    Bots that read invoices, extract data, match payments, send reminders,
+                    and generate finance reports with minimal human involvement.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="badge">Ops Bots</span>
+                <h3>Operations & Workflow Bots</h3>
+                <p>
+                    Bots that move files, update systems, trigger approvals,
+                    send notifications, and keep internal processes running smoothly.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="badge">Data Bots</span>
+                <h3>Data & Reporting Bots</h3>
+                <p>
+                    Bots that collect data from multiple tools, clean it,
+                    update dashboards, and send daily or weekly reports automatically.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="badge">AI Bots</span>
+                <h3>AI & Decision-Support Bots</h3>
+                <p>
+                    AI-powered bots that summarize data, analyze trends,
+                    answer questions, and suggest next actions for your business.
+                </p>
+            </article>
+        </div>
+
+        <p class="section-lead" style="margin-top:28px;">
+            Typical bot platforms and channels we support:
+        </p>
+
+        <div class="chips">
+            <span class="chip">Website Bots</span>
+            <span class="chip">WhatsApp Bots</span>
+            <span class="chip">Email Bots</span>
+            <span class="chip">CRM Bots</span>
+            <span class="chip">Internal Ops Bots</span>
+            <span class="chip">Custom API Bots</span>
+        </div>
+    </div>
+</section>
 
     <!-- Process -->
     <section class="reveal" id="process">
@@ -996,7 +1075,7 @@ $ done <span class="caret"></span></code></pre>
     </section>
 
    <!-- Contact -->
-<!-- <section class="reveal" id="contact">
+<section class="reveal" id="contact">
     <div class="container">
         <h2 class="section-title">Let’s automate your bottlenecks</h2>
         <p class="section-lead">Tell us about your process. We’ll respond within 24 hours with ideas and next steps.
@@ -1037,7 +1116,7 @@ $ done <span class="caret"></span></code></pre>
             </div>
         </form>
     </div>
-</section> -->
+</section>
 
 
     <!-- Footer -->
@@ -1207,7 +1286,7 @@ document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
             formNote.textContent = 'Sending...';
             formNote.style.color = '#86efac'; // green text
 		//https://87e84b689993.ngrok-free.app
-            const response = await fetch('https://automansolutions.app.n8n.cloud/webhook/form-submit', {
+            const response = await fetch('https://2260759c3d1a.ngrok-free.app/webhook/form-submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
